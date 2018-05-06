@@ -32,3 +32,7 @@ deploy:
     tags: false
     repo: TwrpBuilder/android_device_Huawei_SLA_L22
     branch: master
+
+branches:
+  except:
+    - /^(?i:untagged)-.*$/
