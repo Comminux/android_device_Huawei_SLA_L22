@@ -5,7 +5,7 @@ before_install:
   - docker pull surendrajat/twrp-builder:latest
 before_script:
 - cd $HOME && mkdir twrp
-- wget -q https://github.com/TwrpBuilder/twrp-sources/releases/download/omni_twrp-5.1.1-20180211/omni_twrp-5.1.1-20180211-norepo.tar.xz
+- wget -q https://qc1.androidfilehost.com/dl/mZ1iZxyLI6ToqXdDNtijuQ/1554550689/818070582850492151/omni_twrp-5.1.1-20180211-norepo.tar.xz
   -O $HOME/twrp.tar.xz
 - tar -xJf twrp.tar.xz --directory $HOME/twrp/ && rm twrp.tar.xz
 script:
