@@ -16,10 +16,13 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-PRODUCT_COPY_FILES += device/Huawei/SLA_L22/kernel:kernel
+PRODUCT_COPY_FILES += \
+$(LOCAL_PATH)/kernel:kernel #\
+#$(LOCAL_PATH)/recovery.fstab:root/recovery.fstab
 
 PRODUCT_DEVICE := SLA_L22
 PRODUCT_NAME := omni_SLA_L22
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := SLA-L22
 PRODUCT_MANUFACTURER := Huawei
+OUT_DIR=/home/mikado/Work/TWRP/device_tree/omni/out
