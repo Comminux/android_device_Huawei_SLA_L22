@@ -6,7 +6,7 @@ before_install:
 before_script:
 - cd $HOME && mkdir twrp
 - repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-6.0 twrp
-- repo sync
+- cd twrp && repo sync
 script:
   - cd $HOME/twrp/ && git clone https://github.com/Lourens-Rich/android_device_Huawei_SLA_L22.git device/Huawei/SLA_L22
   - git clone https://github.com/TwrpBuilder/android_device_generic_twrpbuilder.git device/generic/twrpbuilder
