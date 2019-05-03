@@ -25,4 +25,4 @@ PRODUCT_NAME := omni_SLA_L22
 PRODUCT_BRAND := Huawei
 PRODUCT_MODEL := SLA-L22
 PRODUCT_MANUFACTURER := Huawei
-OUT_DIR=/home/mikado/Work/TWRP/device_tree/omni/out
+#OUT_DIR=/home/mikado/Work/TWRP/device_tree/omni/out
