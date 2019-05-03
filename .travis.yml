@@ -4,6 +4,8 @@ services:
 before_install:
   - docker pull surendrajat/twrp-builder:latest
 before_script:
+- curl https://storage.googleapis.com/git-repo-downloads/repo > /bin/repo
+- chmod a+x /bin/repo
 - cd $HOME && mkdir twrp
 - repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-6.0 twrp
 - cd twrp && repo sync
