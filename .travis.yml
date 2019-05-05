@@ -4,13 +4,13 @@ services:
 before_install:
   - docker pull lourensrich/twrp-builder:latest
 before_script:
-- apt-get update && apt-get install lib32ncurses5-dev libncurses5-dev
 - curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 - chmod a+x ~/bin/repo
 - mkdir $HOME/twrp && cd $HOME/twrp
 - ~/bin/repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-6.0
 - ~/bin/repo sync
 script:
+  - apt-get update && apt-get install lib32ncurses5-dev libncurses5-dev
   - cd $HOME/twrp/ && git clone https://github.com/Lourens-Rich/android_device_Huawei_SLA_L22.git device/Huawei/SLA_L22
   - git clone https://github.com/TwrpBuilder/android_device_generic_twrpbuilder.git device/generic/twrpbuilder
   - mv bootable/recovery bootable/recovery-orig && git clone https://github.com/omnirom/android_bootable_recovery.git bootable/recovery
